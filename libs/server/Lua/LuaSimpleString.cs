@@ -8,16 +8,13 @@ namespace Garnet.server
 {
     class LuaSimpleString
     {
-        private string contents;
+        public string Contents { get; }
 
-        public LuaSimpleString(string contents)
-        {
-            this.contents = contents;
-        }
+        public LuaSimpleString(string contents) => Contents = contents;
 
-        public string getContents()
+        public string ToString()
         {
-            return contents;
+            return Contents;
         }
     }
 }

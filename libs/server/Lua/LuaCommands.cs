@@ -198,7 +198,7 @@ namespace Garnet.server
                 {
                     if (scriptResult is LuaSimpleString lss)
                     {
-                        while (!RespWriteUtils.WriteSimpleString(lss.getContents(), ref dcurr, dend))
+                        while (!RespWriteUtils.WriteSimpleString(lss.ToString(), ref dcurr, dend))
                             SendAndReset();
                     }
                     else if (scriptResult is string s)
